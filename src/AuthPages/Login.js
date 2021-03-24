@@ -92,17 +92,7 @@ export default function Login(props) {
             setPassword(e.target.value);
         }
     }
-    const isUserAvailable = () => {
-        let user = localStorage.getItem("user");
-        // console.log("user: ", user);
-        if (user) {
-            return true
-        }
-        else {
-            console.log("resutrn false")
-            return false;
-        };
-    }
+
     return (
         <Container component="main" maxWidth="xs">
             <CssBaseline />
@@ -154,7 +144,6 @@ export default function Login(props) {
                         variant="contained"
                         color="primary"
                         className={classes.submit}
-                        disabled={isUserAvailable()}
                         onClick={handleSignup}
                     >
                         Sign Up

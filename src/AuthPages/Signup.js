@@ -55,14 +55,9 @@ export default function SignUp(props) {
 
     useEffect(() => {
         let isAuth = localStorage.getItem("isAuth");
-        let user = localStorage.getItem("user");
         if (isAuth) {
             props.history.push("/")
         }
-        else if (user) {
-            props.history.push('/login')
-        }
-
     }, [])
 
     const handleSubmit = (e) => {
@@ -98,7 +93,7 @@ export default function SignUp(props) {
                 </Avatar>
                 <Typography component="h1" variant="h5">
                     Sign up
-        </Typography>
+                </Typography>
                 <form className={classes.form} noValidate onSubmit={handleSubmit}>
                     <Grid container spacing={2}>
                         <Grid item xs={12} sm={6}>
