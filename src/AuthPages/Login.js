@@ -65,14 +65,15 @@ export default function Login(props) {
 
         if (user) {
             user = JSON.parse(user);
-            console.log("user: ", user);
-            console.log('emal', email, password);
+            // console.log("user: ", user);
+            // console.log('emal', email, password);
             if (user.email.toLowerCase() === email.toLowerCase() && user.password === password) {
                 localStorage.setItem("isAuth", true);
                 props.history.push('/')
             }
             else {
                 console.log("error")
+                alert('Invalid Login crendentials')
             }
 
         }
