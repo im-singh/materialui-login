@@ -75,7 +75,10 @@ export default function Login(props) {
                 console.log("error")
                 alert('Invalid Login crendentials')
             }
-
+        }
+        else {
+            alert("No user available. Sign Up")
+            props.history.push("/signup")
         }
     }
     const handleSignup = () => {
